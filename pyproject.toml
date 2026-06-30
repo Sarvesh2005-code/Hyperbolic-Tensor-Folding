@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "htf_pytorch"
+version = "1.0.0"
+description = "Hyperbolic Tensor Folding: A PyTorch library for Non-Euclidean Attention and KV-Caches"
+readme = "README.md"
+authors = [
+    { name = "Your Name", email = "author@example.com" }
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+    "torch>=2.0.0",
+    "numpy"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov"
+]
