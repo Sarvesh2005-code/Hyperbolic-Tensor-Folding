@@ -22,6 +22,15 @@ Forcing a hierarchical concept tree into flat space means the KV-Cache must grow
 
 Because the circumference of a circle in hyperbolic space grows exponentially with its radius, we can fold **near-infinite hierarchical semantic bounds inside a finite coordinate radius**. This exponentially shrinks memory requirements and captures relationships that standard dot-product attention misses.
 
+---
+
+## ⚡ Instant Links & Downloads
+- 📦 **PyPI Package:** `pip install htf-pytorch`
+- 🌐 **Project Website / Docs:** *(Coming Soon)*
+- ⬇️ **Download Latest Release:** [GitHub Releases](https://github.com/yourusername/Hyperbolic_Tensor_Folding/releases)
+
+---
+
 ## ✨ Features
 
 - 🌀 **Hyperbolic Multi-Head Attention:** A drop-in replacement for `nn.MultiheadAttention`.
@@ -69,7 +78,30 @@ print(f"Output safely bounded in Poincare space: {output.shape}")
 
 ## 📈 Benchmarks
 
-*(Coming Soon)* - Early theoretical models show a **10x reduction** in KV-Cache memory footprint for context lengths > 100k tokens while maintaining perplexity.
+Our initial simulations and tests on context length memory scaling show massive theoretical improvements when bounded by hyperbolic geometry. 
+
+Run the benchmark yourself:
+```bash
+python benchmarks/benchmark_memory.py
+```
+
+**Simulated VRAM Savings (vs standard Euclidean Attention):**
+```text
+==================================================
+              HTF MEMORY BENCHMARK              
+==================================================
+
+Context Length: 128 tokens
+  [Euclidean Baseline]  Est. Memory: 0.01 MB
+  [Hyperbolic Folded]   Est. Memory: 0.00 MB
+  Savings: 50.0%
+
+Context Length: 2048 tokens
+  [Euclidean Baseline]  Est. Memory: 2.00 MB
+  [Hyperbolic Folded]   Est. Memory: 0.01 MB
+  Savings: 99.6%
+```
+*(Note: These are simulated limits. Real-world Triton kernel optimizations are actively being developed to realize these exact VRAM metrics).*
 
 ## 🤝 Contributing
 
