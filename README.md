@@ -26,7 +26,9 @@ Because the circumference of a circle in hyperbolic space grows exponentially wi
 
 - 🌀 **Hyperbolic Multi-Head Attention:** A drop-in replacement for `nn.MultiheadAttention`.
 - 🧠 **Hyperbolic Transformer Blocks:** Complete layers including `HyperbolicLayerNorm` and `HyperbolicMLP`.
-- ⚡ **PyTorch Native:** Built on standard PyTorch primitives. No custom CUDA kernels required (yet!).
+- 📦 **HuggingFace Integration:** Swap out standard LLaMA attention heads dynamically with our `swap_llama_attention()` wrapper.
+- 💾 **Hyperbolic KV-Cache:** Intelligent token eviction based on Poincaré distance to strictly bound memory growth.
+- ⚡ **Triton-Optimized (Beta):** Custom OpenAI Triton kernels for `poincare_dist` to achieve FlashAttention-like speeds.
 - 🛡️ **Numerically Stable:** Defensive manifold clamping ensures no exploding gradients or NaNs.
 
 ## 📦 Installation
