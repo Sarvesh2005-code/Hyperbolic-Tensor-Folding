@@ -27,3 +27,7 @@ dev = [
     "pytest>=7.0",
     "pytest-cov"
 ]
+demo = [
+    "streamlit",
+    "plotly"
+]
