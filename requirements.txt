@@ -1,5 +1,5 @@
-torch
+torch>=2.0.0
 numpy
-networkx
-matplotlib
-scipy
+transformers>=4.30.0
+streamlit
+plotly
