@@ -1,0 +1,10 @@
+torch>=2.0.0
+numpy
+
+[demo]
+streamlit
+plotly
+
+[dev]
+pytest>=7.0
+pytest-cov

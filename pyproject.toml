@@ -31,3 +31,6 @@ demo = [
     "streamlit",
     "plotly"
 ]
+
+[tool.setuptools.packages.find]
+include = ["htf_pytorch*"]
